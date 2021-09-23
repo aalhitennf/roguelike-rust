@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/TrojanBold12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://autoload/DebugHUD/DebugHUD.gd" type="Script" id=2]
+[ext_resource path="res://autoload/DebugHUD/FPS.gd" type="Script" id=3]
+
+[node name="DebugHUD" type="CanvasLayer"]
+layer = 4
+script = ExtResource( 2 )
+
+[node name="CContainer" type="CenterContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -69.0
+margin_bottom = 44.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HContainer" type="HBoxContainer" parent="CContainer"]
+margin_left = 32.0
+margin_top = 22.0
+margin_right = 36.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="VBoxContainer" parent="CContainer/HContainer"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FPS" type="Label" parent="CContainer/HContainer/Name"]
+visible = false
+margin_right = 25.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 1 )
+text = "FPS:"
+
+[node name="Value" type="VBoxContainer" parent="CContainer/HContainer"]
+margin_left = 4.0
+margin_right = 4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FPS" type="Label" parent="CContainer/HContainer/Value"]
+visible = false
+margin_right = 7.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 2
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="CContainer/HContainer/Value/FPS"]
+wait_time = 0.5

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/character/knight/knight_red.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://assets/character/knight/Player.gd" type="Script" id=2]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 2
+playing = true
+centered = false

@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://theme/button.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/main_menu/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/TrojanBold36.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/TrojanBold12.tres" type="DynamicFont" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.145098, 0.184314, 0.227451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VerticalButtonContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 690.0
+margin_top = 364.0
+margin_right = 909.0
+margin_bottom = 535.0
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VerticalButtonContainer"]
+margin_right = 219.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 3 )
+text = "Dungeons"
+
+[node name="Version" type="Label" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 40.0
+margin_right = 219.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 4 )
+text = "v.0.0.1"
+align = 1
+
+[node name="Spacer" type="Label" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 56.0
+margin_right = 219.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 4 )
+text = "
+"
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 87.0
+margin_right = 219.0
+margin_bottom = 105.0
+theme = ExtResource( 1 )
+text = "New game"
+
+[node name="LoadGameButton" type="Button" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 109.0
+margin_right = 219.0
+margin_bottom = 127.0
+theme = ExtResource( 1 )
+text = "Load game"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 131.0
+margin_right = 219.0
+margin_bottom = 149.0
+theme = ExtResource( 1 )
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VerticalButtonContainer"]
+margin_top = 153.0
+margin_right = 219.0
+margin_bottom = 171.0
+theme = ExtResource( 1 )
+text = "Exit"
+
+[connection signal="pressed" from="CenterContainer/VerticalButtonContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VerticalButtonContainer/LoadGameButton" to="." method="_on_LoadGameButton2_pressed"]
+[connection signal="pressed" from="CenterContainer/VerticalButtonContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VerticalButtonContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

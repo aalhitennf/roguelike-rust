@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/tileset.png" type="Texture" id=1]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_between.png" type="Texture" id=2]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_between_end.png" type="Texture" id=3]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_end_bottom.png" type="Texture" id=4]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/corner_outer_tl_c.png" type="Texture" id=5]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/corner_outer_bl_c.png" type="Texture" id=6]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_right_dbl.png" type="Texture" id=7]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/pillar_m.png" type="Texture" id=8]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/pillar_l.png" type="Texture" id=9]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_poison.png" type="Texture" id=10]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/pillar_r.png" type="Texture" id=11]
+[ext_resource path="res://assets/tileset/dungeon/a_tiles/wall_left_dbl.png" type="Texture" id=12]
+
+[node name="floors_and_walls" type="Node2D"]
+
+[node name="wall_left" type="Sprite" parent="."]
+scale = Vector2( 0.923077, 1 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 128, 16, 16 )
+
+[node name="wall_right" type="Sprite" parent="."]
+position = Vector2( 0, 24 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 128, 16, 16 )
+
+[node name="floor1" type="Sprite" parent="."]
+position = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 64, 16, 16 )
+
+[node name="floor2" type="Sprite" parent="."]
+position = Vector2( 0, 216 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 64, 16, 16 )
+
+[node name="floor3" type="Sprite" parent="."]
+position = Vector2( 0, 72 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 64, 16, 16 )
+
+[node name="floor4" type="Sprite" parent="."]
+position = Vector2( 0, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 64, 16, 16 )
+
+[node name="floor5" type="Sprite" parent="."]
+position = Vector2( 0, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 80, 16, 16 )
+
+[node name="floor6" type="Sprite" parent="."]
+position = Vector2( 0, 120 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 80, 16, 16 )
+
+[node name="floor7" type="Sprite" parent="."]
+position = Vector2( 0, 144 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 80, 16, 16 )
+
+[node name="floor8" type="Sprite" parent="."]
+position = Vector2( 0, 168 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 96, 16, 16 )
+
+[node name="floor9" type="Sprite" parent="."]
+position = Vector2( 0, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 96, 16, 16 )
+
+[node name="corner_tl_outer" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+z_index = 1
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -5, -4 )
+region_enabled = true
+region_rect = Rect2( 32, 124, 21, 20 )
+
+[node name="corner_tr_outer" type="Sprite" parent="."]
+position = Vector2( 56, 0 )
+z_index = 1
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 43, 124, 21, 20 )
+
+[node name="wall_top" type="Sprite" parent="."]
+position = Vector2( 32, 24 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 32, 12, 16, 20 )
+
+[node name="corner_bl_inner" type="Sprite" parent="."]
+position = Vector2( 88, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 32, 156, 20, 20 )
+
+[node name="corner_br_inner" type="Sprite" parent="."]
+position = Vector2( 120, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -4, -4 )
+region_enabled = true
+region_rect = Rect2( 44, 156, 20, 20 )
+
+[node name="corner_br_outer" type="Sprite" parent="."]
+position = Vector2( 56, 24 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 43, 156, 21, 20 )
+
+[node name="corner_bl_outer" type="Sprite" parent="."]
+position = Vector2( 56, 48 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -5, -4 )
+region_enabled = true
+region_rect = Rect2( 32, 156, 21, 20 )
+
+[node name="corner_tl_inner" type="Sprite" parent="."]
+position = Vector2( 144, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 32, 124, 16, 20 )
+
+[node name="corner_tr_inner" type="Sprite" parent="."]
+position = Vector2( 176, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -4 )
+region_enabled = true
+region_rect = Rect2( 48, 124, 16, 20 )
+
+[node name="wall_bw" type="Sprite" parent="."]
+position = Vector2( 24, 48 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="wall_bw_et" type="Sprite" parent="."]
+position = Vector2( 32, 72 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -4 )
+
+[node name="wall_bw_eb" type="Sprite" parent="."]
+position = Vector2( 56, 72 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="corner_tl_outer_c" type="Sprite" parent="."]
+position = Vector2( 88, 32 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( -5, -4 )
+
+[node name="corner_bl_outer_c" type="Sprite" parent="."]
+position = Vector2( 120, 32 )
+texture = ExtResource( 6 )
+centered = false
+offset = Vector2( -5, -4 )
+
+[node name="corner_br_outer_c" type="Sprite" parent="."]
+position = Vector2( 88, 64 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 0, -4 )
+
+[node name="corner_tr_outer_c" type="Sprite" parent="."]
+position = Vector2( 120, 64 )
+texture = ExtResource( 6 )
+centered = false
+offset = Vector2( 0, -4 )
+
+[node name="wall_right_dbl" type="Sprite" parent="."]
+position = Vector2( 32, 120 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 0, -16 )
+
+[node name="wall_left_dbl" type="Sprite" parent="."]
+position = Vector2( 56, 120 )
+texture = ExtResource( 12 )
+centered = false
+offset = Vector2( 0, -16 )
+
+[node name="pillar_m" type="Sprite" parent="."]
+position = Vector2( 128, 120 )
+z_index = 1
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -12 )
+
+[node name="pillar_l" type="Sprite" parent="."]
+position = Vector2( 104, 120 )
+z_index = 1
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, -14 )
+
+[node name="pillar_r" type="Sprite" parent="."]
+position = Vector2( 80, 120 )
+z_index = 1
+texture = ExtResource( 11 )
+centered = false
+offset = Vector2( 0, -14 )
+
+[node name="wall_poison" type="Sprite" parent="."]
+position = Vector2( 24, 168 )
+z_index = 1
+texture = ExtResource( 10 )
+centered = false
+offset = Vector2( 0, -4 )
